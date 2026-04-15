@@ -47,6 +47,7 @@ func _ready() -> void:
 		Global.embaralhar_imagens(i)
 		botao_imagem.get_node("imagem").texture = Global.array_imagens[i]
 		botao_imagem.connect("soltou_area", Callable(self, "_on_botao_imagem_soltou_area"))
+		botao_imagem.connect("removeu_area", Callable(self, "_on_botao_imagem_removeu_area"))
 		array_botoes_imagens.append(botao_imagem)
 		add_child(botao_imagem)
 
@@ -56,10 +57,16 @@ func _on_botao_silaba_enviar_id(id) -> void:
 
 
 func _on_botao_imagem_soltou_area(id) -> void:
+	array_botoes_silabas[id_botao_silaba].z_index = 0
 	if id == id_botao_silaba:
 		acertou(id)
 	else:
 		errou(id)
+
+
+func _on_botao_imagem_removeu_area(id) -> void:
+	if id != id_botao_silaba:
+		array_botoes_silabas[id_botao_silaba].z_index = 10
 
 
 func acertou(id):
@@ -69,11 +76,21 @@ func acertou(id):
 	var botao_tomada = array_botoes_silabas[id_botao_silaba].get_node("botao_tomada")
 	var marker_pos = array_botoes_imagens[id].get_node("Marker").global_position
 	botao_tomada.global_position = (marker_pos - botao_tomada.size * 0.35) + Vector2(0,14)
-	array_botoes_silabas[id_botao_silaba].desabilitar_botao()
 	array_botoes_imagens[id]._acertou()
+	array_botoes_silabas[id_botao_silaba].desabilitar_botao()
 	if botoes_certos == 3:
 		Audios.tocar_acertou()
+		
+		if fase < 3:
+			$robo.texture = load("res://assets/robo/robo_%s_bateria.png" %[fase])
+		else:
+			$robo.hide()
+			$robo_pulando.show()
+			$robo_pulando.play("pulando_feliz")
 		await get_tree().create_timer(5.0).timeout
+		
+		if fase == 3:
+			get_tree().change_scene_to_file("res://scenes/fim.tscn")
 		_ready()
 
 

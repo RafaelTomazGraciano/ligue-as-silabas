@@ -9,10 +9,10 @@ var salva_id_area = null
 @export var id:int
 
 signal soltou_area(id)
+signal removeu_area(id)
 
 func _process(_delta: float) -> void:
-	if not Global.arrastando and dentro_area \
-	and not errou:
+	if not Global.arrastando and dentro_area and not errou:
 		soltou_area.emit(id)
 
 
@@ -29,6 +29,7 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 		salva_id_area = null
 		errou = false
 		$cor.hide()
+		removeu_area.emit(id)
 
 
 func _acertou():
@@ -41,10 +42,6 @@ func _errou():
 	errou = true
 	$cor.show()
 	$cor.texture = load("res://assets/tomada/erro.png")
-
-
-func esconde_cor():
-	$cor.hide()
 
 
 func desabilitar():

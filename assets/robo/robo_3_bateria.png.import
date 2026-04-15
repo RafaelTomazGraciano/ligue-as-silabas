@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7mm3524s0kbl"
-path="res://.godot/imported/robo_3_baterias.png-247509d29623a50ca9c4bfa9dcf56696.ctex"
+path="res://.godot/imported/robo_3_bateria.png-c242a6a7c188e18d0b59e27ca630657c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/robo/robo_3_baterias.png"
-dest_files=["res://.godot/imported/robo_3_baterias.png-247509d29623a50ca9c4bfa9dcf56696.ctex"]
+source_file="res://assets/robo/robo_3_bateria.png"
+dest_files=["res://.godot/imported/robo_3_bateria.png-c242a6a7c188e18d0b59e27ca630657c.ctex"]
 
 [params]
 

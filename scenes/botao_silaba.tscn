@@ -33,6 +33,7 @@ size = Vector2(28, 56.000004)
 size = Vector2(78, 79)
 
 [node name="botao_silaba" type="Node2D" unique_id=2106865072]
+z_index = 7
 script = ExtResource("1_jlws3")
 
 [node name="fio" type="Line2D" parent="." unique_id=1804722347]
