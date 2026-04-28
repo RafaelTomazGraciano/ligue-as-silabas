@@ -26,8 +26,6 @@ func tocar_audio(caminho_audio, requester: Node) -> void:
 
 func tocar_acertou():
 	$acertou.play()
-	await get_tree().create_timer(4.0).timeout
-	$acertou.stop()
 
 
 func audio_botao(caminho_audio):
@@ -37,6 +35,15 @@ func audio_botao(caminho_audio):
 	else:
 		$audio_botao.stream = caminho_audio
 	$audio_botao.play()
+
+
+func som_eletricidade(caminho_audio):
+	$eletricidade.stream = load(caminho_audio)
+	$eletricidade.play()
+
+
+func som_eletricidade_parar():
+	$eletricidade.stop()
 
 
 func _on_instrucao_finished() -> void:

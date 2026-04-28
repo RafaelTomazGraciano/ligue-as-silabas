@@ -14,6 +14,10 @@ script = ExtResource("1_a0myk")
 
 [node name="audio_botao" type="AudioStreamPlayer" parent="." unique_id=340025749]
 
+[node name="eletricidade" type="AudioStreamPlayer" parent="." unique_id=1966116563]
+
 [node name="acertou" type="AudioStreamPlayer" parent="." unique_id=1353492740]
 stream = ExtResource("2_2qliq")
 volume_db = -5.0
+
+[connection signal="finished" from="instrucao" to="." method="_on_instrucao_finished"]

@@ -24,11 +24,13 @@ func _on_botao_tomada_button_down() -> void:
 	Global.arrastando = true
 	ajuste_posicao = get_global_mouse_position() - $botao_tomada.global_position
 	enviar_id.emit(id)
+	Audios.som_eletricidade("res://assets/audios/som_eletricidade.mp3")
 
 
 func _on_botao_tomada_button_up() -> void:
 	este_botao_arrastando = false
 	Global.arrastando = false
+	Audios.som_eletricidade_parar()
 
 
 func _on_area_silaba_mouse_entered() -> void:
