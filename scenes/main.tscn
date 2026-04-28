@@ -161,6 +161,36 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_tbgi4"]
+offsets = PackedFloat32Array(0, 0.3442623, 0.8360656)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.93333334, 0, 1, 0, 0.6666667, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_tefeu"]
+gradient = SubResource("Gradient_tbgi4")
+
+[sub_resource type="Curve" id="Curve_o6xl0"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.30337083), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_tipki"]
+curve = SubResource("Curve_o6xl0")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_85g3d"]
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 250.0
+initial_velocity_max = 750.0
+gravity = Vector3(0, 0, 0)
+scale_min = 5.0
+scale_max = 15.0
+scale_curve = SubResource("CurveTexture_tipki")
+color_ramp = SubResource("GradientTexture1D_tefeu")
+turbulence_enabled = true
+turbulence_noise_strength = 6.0
+turbulence_noise_scale = 2.0
+turbulence_influence_min = 0.3
+turbulence_influence_max = 0.8
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jyhfs"]
 texture = ExtResource("3_sugp2")
 
@@ -177,30 +207,6 @@ expand_margin_left = 10.0
 expand_margin_top = 10.0
 expand_margin_right = 10.0
 expand_margin_bottom = 10.0
-
-[sub_resource type="Gradient" id="Gradient_tbgi4"]
-colors = PackedColorArray(0, 1, 1, 1, 0, 0, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_tbgi4"]
-gradient = SubResource("Gradient_tbgi4")
-
-[sub_resource type="Curve" id="Curve_o6xl0"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.34831464), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_tefeu"]
-curve = SubResource("Curve_o6xl0")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_85g3d"]
-particle_flag_disable_z = true
-spread = 180.0
-initial_velocity_min = 35.0
-initial_velocity_max = 100.0
-gravity = Vector3(0, 50, 0)
-scale_min = 15.0
-scale_max = 35.0
-scale_curve = SubResource("CurveTexture_tefeu")
-color_ramp = SubResource("GradientTexture1D_tbgi4")
 
 [node name="main" type="Node2D" unique_id=1981397979]
 script = ExtResource("1_a8y0u")
@@ -230,6 +236,16 @@ scale = Vector2(0.40614617, 0.40355143)
 sprite_frames = SubResource("SpriteFrames_y6deb")
 animation = &"pulando_feliz"
 
+[node name="choque" type="GPUParticles2D" parent="." unique_id=252752500]
+z_index = 5
+position = Vector2(499, 516)
+emitting = false
+amount = 40
+lifetime = 0.3
+explosiveness = 0.8
+randomness = 0.5
+process_material = SubResource("ParticleProcessMaterial_85g3d")
+
 [node name="como_jogar" type="Button" parent="." unique_id=1558141570]
 offset_left = 29.0
 offset_top = 481.0
@@ -238,15 +254,6 @@ offset_bottom = 581.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_jyhfs")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ya4ey")
 theme_override_styles/hover = SubResource("StyleBoxTexture_eb6dy")
-
-[node name="explosao" type="GPUParticles2D" parent="." unique_id=2031000568]
-position = Vector2(495, 490)
-scale = Vector2(1.3, 1.3)
-emitting = false
-amount = 25
-one_shot = true
-explosiveness = 1.0
-process_material = SubResource("ParticleProcessMaterial_85g3d")
 
 [node name="Timer" type="Timer" parent="." unique_id=1380628309]
 autostart = true

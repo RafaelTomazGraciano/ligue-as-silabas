@@ -24,7 +24,7 @@ func _on_botao_tomada_button_down() -> void:
 	Global.arrastando = true
 	ajuste_posicao = get_global_mouse_position() - $botao_tomada.global_position
 	enviar_id.emit(id)
-	Audios.som_eletricidade("res://assets/audios/som_eletricidade.mp3")
+	Audios.som_eletricidade("res://assets/audios/som_eletricidade.ogg")
 
 
 func _on_botao_tomada_button_up() -> void:
@@ -47,6 +47,9 @@ func desabilitar_botao():
 	$botao_tomada.disabled = true
 	Audios.audio_botao(caminho_som)
 
+
+func desabilitar_botao_como_jogar():
+	$botao_tomada.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 func _on_timer_timeout() -> void:
 	Audios.tocar_audio(caminho_som, self)

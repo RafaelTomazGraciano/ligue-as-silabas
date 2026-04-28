@@ -199,3 +199,9 @@ text = "[b][wave amp=150]P A R A B É N S
 [/wave][/b]"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=1863784033]
+wait_time = 30.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

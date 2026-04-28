@@ -18,6 +18,7 @@ signal _instancia_como_jogar
 
 
 func _ready() -> void:
+	Audios.tocar_instrucao("res://assets/audios/tela_do_jogo.ogg")
 	botoes_certos = 0
 	fase += 1
 	Global.embaralhar()
@@ -44,7 +45,7 @@ func _ready() -> void:
 		botao_imagem.position = array_posicoes_botoes_imagens[i]
 		botao_imagem.id = i
 		Global.embaralhar_imagens(i)
-		botao_imagem.get_node("imagem").texture = Global.array_imagens[i]
+		botao_imagem.get_node("imagem").texture = Global.array_imagens[0]
 		botao_imagem.connect("soltou_area", Callable(self, "_on_botao_imagem_soltou_area"))
 		botao_imagem.connect("removeu_area", Callable(self, "_on_botao_imagem_removeu_area"))
 		array_botoes_imagens.append(botao_imagem)
@@ -103,11 +104,18 @@ func errou(id):
 	botao_tomada.global_position = (marker_pos - botao_tomada.size * 0.35) + Vector2(0,14)
 	array_botoes_imagens[id]._errou()
 	await get_tree().create_timer(1.0).timeout
-	# explosao
+	# choque
 	treme_robo(0.5, 15.0)
-	$explosao.restart()
-	$explosao.emitting = true 
-	Audios.som_eletricidade("res://assets/audios/choque.mp3")
+	$choque.restart()
+	$choque.emitting = true 
+	Audios.som_eletricidade("res://assets/audios/choque.ogg")
+	#pisca o robo
+	var tween_pisca = create_tween()
+	for i in 4:
+		tween_pisca.tween_property($robo, "modulate", Color(1, 1, 0, 1), 0.05)
+		tween_pisca.tween_property($robo, "modulate", Color(1, 1, 1, 1), 0.05)
+	await tween_pisca.finished
+	$choque.emitting = false
 
 
 func remover_botao(array):
