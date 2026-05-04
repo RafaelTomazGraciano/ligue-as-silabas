@@ -56,5 +56,8 @@ func _on_instrucao_finished() -> void:
 
 	# garante que o botão ainda existe e o mouse ainda está nele
 	if is_instance_valid(requester) and requester.is_mouse_inside():
-		$audio.stream = load(caminho)
+		if caminho is String:
+			$audio.stream = load(caminho)
+		else:
+			$audio_botao.stream = caminho
 		$audio.play()
