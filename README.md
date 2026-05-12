@@ -2,6 +2,11 @@
 
 **Ligue as Sílabas** é um jogo educativo desenvolvido para auxiliar no processo de alfabetização infantil. O objetivo do jogo é ligar sílabas às imagens correspondentes
 
+## Tecnologias
+
+- Desenvolvido com **Godot Engine 4.6.2**
+
+
 ## Objetivo
 
 - A criança deve identificar sílabas e formar palavras corretamente
@@ -22,14 +27,6 @@
 - Feedback imediato para reforçar o aprendizado
 - Interface pensada para crianças
 
-## Tecnologias
-
-- Desenvolvido com **Godot Engine 4.6.2**
-
-## Público-alvo
-
-- Crianças em fase de alfabetização
-- Educadores e pais que buscam recursos lúdicos para ensinar sílabas
 
 ## Estrutura do projeto
 
