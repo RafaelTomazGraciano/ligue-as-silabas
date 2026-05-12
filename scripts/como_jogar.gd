@@ -35,7 +35,7 @@ func _ready() -> void:
 		botao_imagem.position = array_posicoes_botoes_imagens[i]
 		botao_imagem.id = i
 		Global.embaralhar_imagens(i)
-		botao_imagem.get_node("imagem").texture = Global.array_imagens[i]
+		botao_imagem.get_node("imagem").texture = load(Global.array_imagens[i].imagem)
 		botao_imagem.connect("soltou_area", Callable(self, "_on_botao_imagem_soltou_area"))
 		array_botoes_imagens.append(botao_imagem)
 		add_child(botao_imagem)

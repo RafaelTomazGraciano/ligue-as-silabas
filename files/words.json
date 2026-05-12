@@ -1,0 +1,358 @@
+{
+	"words": [
+		{
+			"palavra": "AVIÃO",
+			"silaba": "A",
+			"imagens": [
+				{
+					"imagem": "res://files/A_Aviao_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/A_Aviao_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/A_Aviao_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/A_Aviao_Imagem_2.png"
+				}
+			],
+			"som": "res://files/a.ogg",
+			"complemento_silaba": "_VIAO"
+		},
+		{
+			"palavra": "BANANA",
+			"silaba": "BA",
+			"imagens": [
+				{
+					"imagem": "res://files/Ba_Banana_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/Ba_Banana_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/Ba_Banana_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/Ba_Banana_Imagem_2.png"
+				}
+			],
+			"som": "res://files/ba.ogg",
+			"complemento_silaba": "_ _NANA"
+		},
+		{
+			"palavra": "CACHORRO",
+			"silaba": "CA",
+			"imagens": [
+				{
+					"imagem": "res://files/Ca_Cachorro_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/Ca_Cachorro_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/Ca_Cachorro_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/Ca_Cachorro_Imagem_2.png"
+				}
+			],
+			"som": "res://files/ca.ogg",
+			"complemento_silaba": "_ _CHORRO"
+		},
+		{
+			"palavra": "DADO",
+			"silaba": "DA",
+			"imagens": [
+				{
+					"imagem": "res://files/Da_Dado_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/Da_Dado_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/Da_Dado_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/Da_Dado_Imagem_2.png"
+				}
+			],
+			"som": "res://files/da.ogg",
+			"complemento_silaba": "_ _DO"
+		},
+		{
+			"palavra": "FACA",
+			"silaba": "FA",
+			"imagens": [
+				{
+					"imagem": "res://files/Fa_Faca_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/Fa_Faca_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/Fa_Faca_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/Fa_Faca_Imagem_2.png"
+				}
+			],
+			"som": "res://files/fa.ogg",
+			"complemento_silaba": "_ _CA"
+		},
+		{
+			"palavra": "GATO",
+			"silaba": "GA",
+			"imagens": [
+				{
+					"imagem": "res://files/Ga_Gato_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/Ga_Gato_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/Ga_Gato_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/Ga_Gato_Imagem_2.png"
+				}
+			],
+			"som": "res://files/ga.ogg",
+			"complemento_silaba": "_ _TO"
+		},
+		{
+			"palavra": "JACARÉ",
+			"silaba": "JA",
+			"imagens": [
+				{
+					"imagem": "res://files/Ja_Jacare_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/Ja_Jacare_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/Ja_Jacare_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/Ja_Jacare_Imagem_2.png"
+				}
+			],
+			"som": "res://files/ja.ogg",
+			"complemento_silaba": "_ _CARE"
+		},
+		{
+			"palavra": "LÁPIS",
+			"silaba": "LA",
+			"imagens": [
+				{
+					"imagem": "res://files/La_Lapis_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/La_Lapis_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/La_Lapis_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/La_Lapis_Imagem_2.png"
+				}
+			],
+			"som": "res://files/la.ogg",
+			"complemento_silaba": "_ _PIS"
+		},
+		{
+			"palavra": "MACACO",
+			"silaba": "MA",
+			"imagens": [
+				{
+					"imagem": "res://files/Ma_Macaco_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/Ma_Macaco_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/Ma_Macaco_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/Ma_Macaco_Imagem_2.png"
+				}
+			],
+			"som": "res://files/ma.ogg",
+			"complemento_silaba": "_ _CACO"
+		},
+		{
+			"palavra": "NAVIO",
+			"silaba": "NA",
+			"imagens": [
+				{
+					"imagem": "res://files/Na_Navio_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/Na_Navio_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/Na_Navio_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/Na_Navio_Imagem_2.png"
+				}
+			],
+			"som": "res://files/na.ogg",
+			"complemento_silaba": "_ _VIO"
+		},
+		{
+			"palavra": "PATO",
+			"silaba": "PA",
+			"imagens": [
+				{
+					"imagem": "res://files/Pa_Pato_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/Pa_Pato_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/Pa_Pato_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/Pa_Pato_Imagem_2.png"
+				}
+			],
+			"som": "res://files/pa.ogg",
+			"complemento_silaba": "_ _TO"
+		},
+		{
+			"palavra": "QUATI",
+			"silaba": "QUA",
+			"imagens": [
+				{
+					"imagem": "res://files/Qua_Quati_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/Qua_Quati_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/Qua_Quati_Imagem_1.png"
+				}
+			],
+			"som": "res://files/qua.ogg",
+			"complemento_silaba": "_ _ _TI"
+		},
+		{
+			"palavra": "RATO",
+			"silaba": "RA",
+			"imagens": [
+				{
+					"imagem": "res://files/Ra_Rato_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/Ra_Rato_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/Ra_Rato_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/Ra_Rato_Imagem_2.png"
+				}
+			],
+			"som": "res://files/ra.ogg",
+			"complemento_silaba": "_ _TO"
+		},
+		{
+			"palavra": "SAPO",
+			"silaba": "SA",
+			"imagens": [
+				{
+					"imagem": "res://files/Sa_Sapo_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/Sa_Sapo_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/Sa_Sapo_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/Sa_Sapo_Imagem_2.png"
+				}
+			],
+			"som": "res://files/sa.ogg",
+			"complemento_silaba": "_ _PO"
+		},
+		{
+			"palavra": "TATU",
+			"silaba": "TA",
+			"imagens": [
+				{
+					"imagem": "res://files/Ta_Tatu_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/Ta_Tatu_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/Ta_Tatu_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/Ta_Tatu_Imagem_2.png"
+				}
+			],
+			"som": "res://files/ta.ogg",
+			"complemento_silaba": "_ _TU"
+		},
+		{
+			"palavra": "VACA",
+			"silaba": "VA",
+			"imagens": [
+				{
+					"imagem": "res://files/Va_Vaca_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/Va_Vaca_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/Va_Vaca_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/Va_Vaca_Imagem_2.png"
+				}
+			],
+			"som": "res://files/va.ogg",
+			"complemento_silaba": "_ _CA"
+		},
+		{
+			"palavra": "XADREZ",
+			"silaba": "XA",
+			"imagens": [
+				{
+					"imagem": "res://files/Xa_Xadrez_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/Xa_Xadrez_Foto_2.png"
+				},
+				{
+					"imagem": "res://files/Xa_Xadrez_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/Xa_Xadrez_Imagem_2.png"
+				}
+			],
+			"som": "res://files/xa.ogg",
+			"complemento_silaba": "_ _DREZ"
+		},
+		{
+			"palavra": "ZABUMBA",
+			"silaba": "ZA",
+			"imagens": [
+				{
+					"imagem": "res://files/Za_Zabumba_Foto_1.png"
+				},
+				{
+					"imagem": "res://files/Za_Zabumba_Imagem_1.png"
+				},
+				{
+					"imagem": "res://files/Za_Zabumba_Imagem_2.png"
+				}
+			],
+			"som": "res://files/za.ogg",
+			"complemento_silaba": "_ _BUMBA"
+		}
+	]
+}
