@@ -27,16 +27,15 @@
 - Feedback imediato para reforçar o aprendizado
 - Interface pensada para crianças
 
-
 ## Estrutura do projeto
 
 - `scenes/` — cenas do jogo (início, menu, fase principal, tutorial, fim)
 - `scripts/` — scripts em GDScript que controlam a lógica do jogo
 - `assets/` — imagens, áudios e outros recursos visuais
 
-## Como executar
+## Contribuição Pedagógica
 
-1. Abra o projeto no Godot Engine 4.6.2
-2. Execute a cena principal (`main.tscn`) ou a cena de início (`inicio.tscn`)
-3. Aproveite o jogo e teste as fases educacionais
-
+- Promove a alfabetização
+- Auxilia na coordenação motora fina através do arrastar e soltar
+- Desenvolve autonomia na aprendizagem através da exploração lúdica
+- Promove o raciocínio lógico através da resolução de problemas linguísticos
