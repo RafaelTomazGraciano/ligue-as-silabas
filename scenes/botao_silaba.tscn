@@ -27,7 +27,7 @@ texture = ExtResource("3_7h553")
 modulate_color = Color(0.87329835, 0.87329847, 0.87329805, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g7e6a"]
-size = Vector2(28, 56.000004)
+size = Vector2(44, 65.00001)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jlws3"]
 size = Vector2(78, 79)
@@ -76,7 +76,7 @@ position = Vector2(-219.66528, 53.078556)
 scale = Vector2(2.0920503, 2.1231422)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="botao_tomada/area_tomada" unique_id=89212194]
-position = Vector2(161, 2.9999983)
+position = Vector2(162, 3.5000005)
 shape = SubResource("RectangleShape2D_g7e6a")
 
 [node name="area_silaba" type="Area2D" parent="." unique_id=761418146]
