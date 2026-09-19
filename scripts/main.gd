@@ -10,17 +10,21 @@ var array_botoes_silabas:Array
 var array_botoes_imagens:Array
 
 var id_botao_silaba: int
-var botoes_certos = 0
-var fase = 0
-var mouse_dentro = false
+var botoes_certos: int = 0
+var fase: int = 0
+var total_fases: int = 5
+var mouse_dentro: bool = false
 
 signal _instancia_como_jogar
 
 
 func _ready() -> void:
-	Audios.tocar_instrucao("res://assets/audios/tela_do_jogo.ogg")
+	if fase == 0:
+		Audios.tocar_instrucao("res://assets/audios/tela_do_jogo.ogg")
+	
 	botoes_certos = 0
 	fase += 1
+	$bateria.definir_total_fases(total_fases)
 	Global.embaralhar()
 	
 	if fase > 1:
@@ -82,15 +86,29 @@ func acertou(id):
 	Audios.tocar_acertou()
 	if botoes_certos == 3:
 		
-		if fase < 3:
-			$robo.texture = load("res://assets/robo/robo_%s_bateria.png" %[fase])
+		if fase < total_fases:
+			$bateria.definir_nivel(fase)
 		else:
+			$bateria.definir_nivel(fase)
+			$AnimationPlayer.play("carregar_robo")
+			await $AnimationPlayer.animation_finished
+			$particluasCarga.emitting = true
+			$glow.show()
+			await $bateria.descarregar()
+			$robo.texture = load("res://assets/robo/robo_1_bateria.png")
+			await get_tree().create_timer(0.8).timeout
+			$robo.texture = load("res://assets/robo/robo_2_bateria.png")
+			await get_tree().create_timer(0.8).timeout
+			$robo.texture = load("res://assets/robo/robo_3_bateria.png")
+			$AnimationPlayer.play_backwards("carregar_robo")
+			$particluasCarga.emitting = false
+			$glow.hide()
 			$robo.hide()
 			$robo_pulando.show()
 			$robo_pulando.play("pulando_feliz")
-		await get_tree().create_timer(5.0).timeout
+		await get_tree().create_timer(2.5).timeout
 		
-		if fase == 3:
+		if fase == total_fases:
 			get_tree().change_scene_to_file("res://scenes/fim.tscn")
 		_ready()
 
