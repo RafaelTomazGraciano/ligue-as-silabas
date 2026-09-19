@@ -1,7 +1,7 @@
 extends Node2D
 
-var amplitude: float = 4.0
-var velocidade: float = 1.5
+@export var amplitude: float = 4.0
+@export var velocidade: float = 1.5
 
 var posicoes_originais: Array[Vector2] = []
 var deslocamentos: Array[float] = []

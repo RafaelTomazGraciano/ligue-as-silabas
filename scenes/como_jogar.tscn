@@ -164,35 +164,13 @@ animations = [{
 "speed": 30.0
 }]
 
-[sub_resource type="Gradient" id="Gradient_fmylf"]
-offsets = PackedFloat32Array(0, 0.3442623, 0.8360656)
-colors = PackedColorArray(1, 1, 1, 1, 1, 0.93333334, 0, 1, 0, 0.6666667, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_d33xf"]
-gradient = SubResource("Gradient_fmylf")
-
 [sub_resource type="Curve" id="Curve_25ywq"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.30337083), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_o4ncu"]
-curve = SubResource("Curve_25ywq")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_neguy"]
-particle_flag_disable_z = true
-spread = 180.0
-initial_velocity_min = 250.0
-initial_velocity_max = 750.0
-gravity = Vector3(0, 0, 0)
-scale_min = 5.0
-scale_max = 15.0
-scale_curve = SubResource("CurveTexture_o4ncu")
-color_ramp = SubResource("GradientTexture1D_d33xf")
-turbulence_enabled = true
-turbulence_noise_strength = 6.0
-turbulence_noise_scale = 2.0
-turbulence_influence_min = 0.3
-turbulence_influence_max = 0.8
+[sub_resource type="Gradient" id="Gradient_fmylf"]
+offsets = PackedFloat32Array(0, 0.3442623, 0.8360656)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.93333334, 0, 1, 0, 0.6666667, 1, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s20jd"]
 texture = ExtResource("6_25ywq")
@@ -321,15 +299,21 @@ scale = Vector2(0.40614617, 0.40355143)
 sprite_frames = SubResource("SpriteFrames_o4ncu")
 animation = &"pulando_feliz"
 
-[node name="choque" type="GPUParticles2D" parent="." unique_id=1448005352]
-z_index = 5
+[node name="choque" type="CPUParticles2D" parent="." unique_id=1448005352]
 position = Vector2(499, 516)
 emitting = false
 amount = 40
 lifetime = 0.3
 explosiveness = 0.8
 randomness = 0.5
-process_material = SubResource("ParticleProcessMaterial_neguy")
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 250.0
+initial_velocity_max = 750.0
+scale_amount_min = 5.0
+scale_amount_max = 15.0
+scale_amount_curve = SubResource("Curve_25ywq")
+color_ramp = SubResource("Gradient_fmylf")
 
 [node name="pular_tutorial" type="Button" parent="." unique_id=621947356]
 offset_left = 722.0
